@@ -1,0 +1,27 @@
+header {
+  border-bottom: 1px solid #ececec;
+}
+
+.button-menu {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 8px;
+  border: none;
+  background-color: transparent;
+}
+
+.button-menu .icon-close {
+  display: none;
+}
+
+.button-menu.is-open .icon-close {
+  display: block;
+}
+
+.button-menu.is-open .icon-menu {
+  display: none;
+}
+//! Navigation
+.container.position {
+  height: 80px;
+}
