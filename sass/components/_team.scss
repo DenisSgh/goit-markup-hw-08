@@ -1,0 +1,124 @@
+.team {
+  text-align: center;
+  background-color: #f5f4fa;
+
+  @include paddingContainer(60px);
+
+  @media screen and (min-width: $desctop) {
+    @include paddingContainer(94px);
+  }
+}
+
+.team-title {
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.17;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: $desctop) {
+    font-size: 36px;
+  }
+}
+
+.team-list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.team-list .team-item {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (max-width: $max-tablet) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: $desctop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.team-foto {
+  max-width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 354px;
+  }
+
+  @media screen and (min-width: $desctop) {
+    max-width: 270px;
+  }
+}
+
+.team-description {
+  padding: 30px 0px 24px;
+  margin: 0 10px;
+
+  @media screen and (min-width: $desctop) {
+    padding: 30px 0px;
+  }
+}
+
+.team .person-name {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.team .person-position {
+  margin-bottom: 16px;
+
+  color: $secondaryTextColor;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.team-link-list {
+  @extend %flex;
+
+  max-width: 206px;
+  max-height: 44px;
+  margin: 0 auto;
+}
+
+.team-link-list .link-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-link {
+  @extend %flex;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: $iconsColor;
+
+  transition: background-color $transitionParameter, fill $transitionParameter,
+    transform $transitionParameter;
+
+  &:hover,
+  &:focus {
+    background-color: $hoverColor;
+    fill: $iconFillColor;
+    transform: scale(1.25);
+  }
+}
