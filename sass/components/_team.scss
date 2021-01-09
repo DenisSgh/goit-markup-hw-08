@@ -56,14 +56,14 @@
 }
 
 .team-foto {
-  max-width: 100%;
+  width: 100%;
 
   @media screen and (min-width: $tablet) {
-    max-width: 354px;
+    width: 354px;
   }
 
   @media screen and (min-width: $desctop) {
-    max-width: 270px;
+    width: 270px;
   }
 }
 
