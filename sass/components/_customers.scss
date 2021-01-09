@@ -1,0 +1,92 @@
+.regular-customers {
+  @include paddingContainer(60px);
+
+  @media screen and (min-width: $desctop) {
+    @include paddingContainer(94px);
+  }
+}
+
+.regular-customers-title {
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: $desctop) {
+    font-size: 36px;
+  }
+}
+
+.customers-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $max-mobile) {
+    flex-direction: column;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.customers-list .item {
+  width: 210px;
+
+  @media screen and (max-width: $max-mobile) {
+    width: 70%;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $max-tablet) {
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(-n + 4) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
+    width: 226px;
+
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(-n + 3) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $desctop) {
+    width: 170px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.customer-link {
+  @extend %flex;
+
+  height: 90px;
+  border: 1px solid $iconsColor;
+  border-radius: 4px;
+  fill: $iconsColor;
+  transition: border-color $transitionParameter, fill $transitionParameter,
+    transform $transitionParameter;
+
+  &:hover,
+  &:focus {
+    fill: $hoverColor;
+    border-color: $hoverColor;
+    transform: scale(1.1);
+  }
+}
