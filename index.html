@@ -15,46 +15,51 @@
     <div class="container position">
       <!-- Navigation -->
       <nav class="navigation">
-        <a href="./index.html" class="logo"><span class="logob">Web</span>Studio</a>
+        <a href="./index.html" class="logo-header"><span class="logo">Web</span>Studio</a>
 
-        <button class="button-menu is-open" type="button">
+        <button class="button-menu" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
           <svg width="24" height="16" aria-label="Переключатель мобильного меню">
-            <use class="icon-close" href="./image/studio/sprite.svg#icon-close-nav"></use>
             <use class="icon-menu" href="./image/studio/sprite.svg#icon-menu"></use>
+            <use class="icon-close" href="./image/studio/sprite.svg#icon-close-nav"></use>
           </svg>
         </button>
 
-        <ul class="site-nav">
-          <li class="item">
-            <a href="./index.html" class="link link-current">Студия</a>
-          </li>
-          <li class="item">
-            <a href="./portfolio.html" class="link">Портфолио</a>
-          </li>
-          <li class="item">
-            <a href="" class="link">Контакты</a>
-          </li>
-        </ul>
+        <div class="menu-container" id="menu-container" data-menu>
+          <div class="navigation-container">
+            <ul class="site-navigation">
+              <li class="item">
+                <a href="./index.html" class="link link-current">Студия</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="item">
+                <a href="" class="link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts-container">
+            <ul class="site-contacts">
+              <li class="item">
+                <a href="mailto:info@devstudio.com" class="link link-contacts">
+                  <svg class="icon" width="16" height="12">
+                    <use href="./image/studio/sprite.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="item">
+                <a href="tel:+380961111111" class="link link-contacts">
+                  <svg class="icon" width="10" height="16">
+                    <use href="./image/studio/sprite.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-
-      <ul class="site-info">
-        <li class="item">
-          <a href="mailto:info@devstudio.com" class="link link-contacts">
-            <svg class="icon" width="16" height="12">
-              <use href="./image/studio/sprite.svg#icon-envelope"></use>
-            </svg>
-            info@devstudio.com
-          </a>
-        </li>
-        <li class="item">
-          <a href="tel:+380961111111" class="link link-contacts">
-            <svg class="icon" width="10" height="16">
-              <use href="./image/studio/sprite.svg#icon-smartphone"></use>
-            </svg>
-            +38 096 111 11 11
-          </a>
-        </li>
-      </ul>
     </div>
   </header>
 
@@ -142,35 +147,35 @@
 
         <ul class="team-list">
           <li class="team-item">
+            <img class="team-foto" class="team-foto" src="./image/studio/foto1.jpg" alt="Игорь Демьяненко">
             <div class="team-description">
-              <img src="./image/studio/foto1.jpg" alt="Игорь Демьяненко" width="450px">
               <h3 class="person-name">Игорь Демьяненко</h3>
               <p class="person-position">Product Designer</p>
               <ul class="team-link-list">
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="20" height="20">
+                    <svg width="20" height="20">
                       <use href="./image/studio/sprite.svg#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="20" height="16">
+                    <svg width="20" height="16">
                       <use href="./image/studio/sprite.svg#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="10" height="20">
+                    <svg width="10" height="20">
                       <use href="./image/studio/sprite.svg#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="20" height="20">
+                    <svg width="20" height="20">
                       <use href="./image/studio/sprite.svg#icon-linkedin"></use>
                     </svg>
                   </a>
@@ -179,35 +184,35 @@
             </div>
           </li>
           <li class="team-item">
+            <img class="team-foto" src="./image/studio/foto2.jpg" alt="Ольга Репина">
             <div class="team-description">
-              <img src="./image/studio/foto2.jpg" alt="Ольга Репина" width="450px">
               <h3 class="person-name">Ольга Репина</h3>
               <p class="person-position">Frontend Developer</p>
               <ul class="team-link-list">
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="20" height="20">
+                    <svg width="20" height="20">
                       <use href="./image/studio/sprite.svg#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="20" height="16">
+                    <svg width="20" height="16">
                       <use href="./image/studio/sprite.svg#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="10" height="20">
+                    <svg width="10" height="20">
                       <use href="./image/studio/sprite.svg#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="20" height="20">
+                    <svg width="20" height="20">
                       <use href="./image/studio/sprite.svg#icon-linkedin"></use>
                     </svg>
                   </a>
@@ -216,35 +221,35 @@
             </div>
           </li>
           <li class="team-item">
+            <img class="team-foto" src="./image/studio/foto3.jpg" alt="Николай Тарасов">
             <div class="team-description">
-              <img src="./image/studio/foto3.jpg" alt="Николай Тарасов" width="450px">
               <h3 class="person-name">Николай Тарасов</h3>
               <p class="person-position">Marketing</p>
               <ul class="team-link-list">
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="20" height="20">
+                    <svg width="20" height="20">
                       <use href="./image/studio/sprite.svg#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="20" height="16">
+                    <svg width="20" height="16">
                       <use href="./image/studio/sprite.svg#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="10" height="20">
+                    <svg width="10" height="20">
                       <use href="./image/studio/sprite.svg#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="20" height="20">
+                    <svg width="20" height="20">
                       <use href="./image/studio/sprite.svg#icon-linkedin"></use>
                     </svg>
                   </a>
@@ -253,35 +258,35 @@
             </div>
           </li>
           <li class="team-item">
+            <img class="team-foto" src="./image/studio/foto4.jpg" alt="Михаил Ермаков">
             <div class="team-description">
-              <img src="./image/studio/foto4.jpg" alt="Михаил Ермаков" width="450px">
               <h3 class="person-name">Михаил Ермаков</h3>
               <p class="person-position">UI Designer</p>
               <ul class="team-link-list">
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="20" height="20">
+                    <svg width="20" height="20">
                       <use href="./image/studio/sprite.svg#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="20" height="16">
+                    <svg width="20" height="16">
                       <use href="./image/studio/sprite.svg#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="10" height="20">
+                    <svg width="10" height="20">
                       <use href="./image/studio/sprite.svg#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="link-item">
                   <a href="" class="team-link">
-                    <svg class="icon" width="20" height="20">
+                    <svg width="20" height="20">
                       <use href="./image/studio/sprite.svg#icon-linkedin"></use>
                     </svg>
                   </a>
@@ -349,7 +354,7 @@
   <footer>
     <div class="container">
       <div class="adress-container">
-        <a href="./index.html" class="logow"><span class="logob">Web</span>Studio</a>
+        <a href="./index.html" class="logo-footer"><span class="logo">Web</span>Studio</a>
 
         <address>
           <ul class="contacts">
@@ -427,7 +432,7 @@
           </svg>
         </button>
 
-        <p>Оставьте свои данные, мы вам перезвоним</p>
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
 
         <div class="input-container">
           <label class="form-label" for="name">Имя</label>
@@ -471,5 +476,6 @@
 
   <!-- Script for modal -->
   <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 </html>
