@@ -1,0 +1,263 @@
+//! Modal Window
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+
+  opacity: 1;
+  transition: opacity $transitionParameter;
+
+  overflow-y: scroll;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) rotate(90deg) scale(0.1);
+}
+
+//! Modal insides
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+
+  width: calc(95% - 3px);
+  max-width: 528px;
+  height: 609px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: $transitionParameter;
+
+  @media screen and (min-width: $tablet) {
+    width: 453px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: $desctop) {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  fill: currentColor;
+  cursor: pointer;
+
+  transition: fill $transitionParameter, scale $transitionParameter;
+
+  &:hover,
+  &:focus {
+    fill: $hoverColor;
+    transform: scale(1.05);
+  }
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+
+  @media screen and (min-width: $desctop) {
+    line-height: 1.15;
+  }
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  fill: currentColor;
+
+  transition: fill $transitionParameter;
+}
+
+.modal-form .input-container {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-form .form-label {
+  margin-bottom: 4px;
+
+  color: #757575;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.modal-form .form-input {
+  position: relative;
+  padding: 11px 12px 11px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  transition: border $transitionParameter;
+
+  // Switch border color by hover
+  &:hover,
+  &:focus {
+    border: 1px solid $hoverColor;
+    outline: none;
+  }
+}
+
+.modal-form textarea {
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  // Switch border color by hover
+  &:hover,
+  &:focus {
+    border: 1px solid $hoverColor;
+    outline: none;
+  }
+}
+
+//! Switch icon color by hover
+.modal-form .form-input:hover ~ .modal-icon,
+.modal-form .form-input:focus ~ .modal-icon {
+  fill: $hoverColor;
+}
+
+//! Checkbox changes
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  transition: background $transitionParameter, border $transitionParameter;
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.957 7.752l-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422z' fill='%23fff' stroke='%23fff' stroke-width='.2'/%3e%3c/svg%3e");
+  background-color: #2196f3;
+  background-size: contain;
+  background-origin: border-box;
+  border-color: #2196f3;
+}
+
+.input-container.textarea {
+  margin-bottom: 0;
+}
+
+.input-checkbox-container label[for='privacy'] {
+  @extend %flex;
+  flex-direction: row;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  color: #757575;
+
+  @media screen and (min-width: $desctop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.input-checkbox-container .privacy-link {
+  text-decoration-line: underline;
+  color: #2196f3;
+}
+
+.button-submit {
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+
+  transition: background $transitionParameter;
+
+  &:hover,
+  &:focus {
+    background: #188ce8;
+  }
+}
