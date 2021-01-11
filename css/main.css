@@ -1278,9 +1278,8 @@ address {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .social-links-container {
-    margin-top: 8px;
     width: 50%;
   }
 }
@@ -1300,7 +1299,7 @@ address {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .social-links-title {
     margin-top: 12px;
   }

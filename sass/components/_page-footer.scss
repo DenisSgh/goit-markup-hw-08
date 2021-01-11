@@ -74,8 +74,7 @@ address {
     margin-bottom: 60px;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
-    margin-top: 8px;
+  @media screen and (min-width: $tablet) {
     width: 50%;
   }
 
@@ -93,7 +92,7 @@ address {
   font-weight: 700;
   text-transform: uppercase;
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $tablet) {
     margin-top: 12px;
   }
 }
