@@ -1,13 +1,235 @@
 header {
+  position: relative;
+  // background-color: #fff;
   border-bottom: 1px solid #ececec;
 }
 
+// ! Navigation
+.position {
+  display: flex;
+  align-items: center;
+  height: 80px;
+
+  @media screen and (max-width: $max-tablet) {
+    justify-content: space-between;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation .link {
+  display: block;
+
+  @media screen and (min-width: $tablet) {
+    padding: 32px 0;
+  }
+}
+
+//! Site navigation
+.navigation-container {
+  @media screen and (max-width: $max-tablet) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: $desctop) {
+    margin-left: 93px;
+  }
+}
+
+.site-navigation {
+  display: flex;
+
+  @media screen and (max-width: $max-tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.site-navigation .item {
+  position: relative;
+
+  @media screen and (max-width: $max-tablet) {
+    &:not(:last-child) {
+      padding-bottom: 10px;
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.site-navigation .link::after {
+  content: '';
+
+  display: block;
+  width: 0;
+  height: 4px;
+
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+
+  background: $hoverColor;
+  border-radius: 2px;
+
+  transition: width $transitionParameter;
+}
+
+.site-navigation .link:hover::after,
+.site-navigation .link:focus::after {
+  width: 100%;
+  left: 0;
+}
+
+.site-navigation .link-current::after {
+  content: '';
+
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+
+  background: $hoverColor;
+  border-radius: 2px;
+}
+
+//! Site-info
+.contacts-container {
+  margin-left: auto;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    // margin-left: 73px;
+  }
+
+  @media screen and (min-width: $desctop) {
+    // margin-left: 289px;
+  }
+}
+
+.site-contacts {
+  margin-left: auto;
+  @media screen and (min-width: $desctop) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+
+.site-contacts .link {
+  margin-left: auto;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.site-contacts .item:not(:last-child) {
+  @media screen and (max-width: $max-tablet) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: $desctop) {
+    margin-right: 50px;
+  }
+}
+
+.site-contacts .icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+// ! Links and interaction with them
+.link {
+  color: $primaryTextColor;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+
+  transition: color $transitionParameter;
+
+  &:hover,
+  &:focus,
+  &-current {
+    color: $hoverColor;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.link-contacts {
+  color: $secondaryTextColor;
+
+  @media screen and (max-width: $max-tablet) {
+    font-size: 18px;
+    line-height: 1.17;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+
+  @media screen and (min-width: $desctop) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.link.link-contacts {
+  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
+    padding: 0;
+  }
+}
+
+//! Button options
 .button-menu {
-  display: inline-block;
-  margin: 0;
+  display: inline-flex;
   padding: 12px 8px;
   border: none;
   background-color: transparent;
+
+  transition: fill $transitionParameter;
+
+  &:hover,
+  &:focus {
+    fill: $hoverColor;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .button-menu .icon-close {
@@ -21,7 +243,35 @@ header {
 .button-menu.is-open .icon-menu {
   display: none;
 }
-//! Navigation
-.container.position {
-  height: 80px;
+
+.menu-container {
+  display: none;
+  text-align: center;
+
+  &.is-open {
+    display: block;
+    z-index: 999;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    @include paddingContainer(60px);
+
+    width: 100%;
+    height: 393px;
+    background-color: #fff;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+  }
 }
