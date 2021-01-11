@@ -74,7 +74,7 @@ address {
     margin-bottom: 60px;
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
     margin-top: 8px;
     width: 50%;
   }
