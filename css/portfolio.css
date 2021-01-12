@@ -42,6 +42,7 @@ body {
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.03em;
+  padding-top: 80px;
 }
 
 body.modal-open {
@@ -121,8 +122,17 @@ img {
 }
 
 header {
-  position: relative;
   border-bottom: 1px solid #ececec;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 998;
+  }
 }
 
 .position {
