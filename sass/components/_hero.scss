@@ -1,7 +1,7 @@
 .hero {
   color: #fff;
-  max-width: 1600px;
-  // height: 100%;
+  width: 100%;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-color: #2f303a;
@@ -10,7 +10,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url('../image/studio/bg-hero-img.jpg');
+    url('../../image/studio/hero/mobile/bg-hero-mobile.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -18,10 +18,60 @@
 
   @include paddingContainer(118px);
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2ddpx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../../image/studio/hero/mobile/bg-hero-mobile@2x.jpg');
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../../image/studio/hero/tablet/bg-hero-tablet.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2ddpx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../../image/studio/hero/tablet/bg-hero-tablet@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
     @include paddingContainer(200px);
 
+    max-width: 1600px;
     height: 600px;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../../image/studio/hero/desktop/bg-hero-desktop.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2ddpx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../../image/studio/hero/desktop/bg-hero-desktop@2x.jpg');
+    }
   }
 }
 
@@ -35,7 +85,7 @@
   max-width: 360px;
   margin: 0 auto 30px;
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     font-size: 44px;
     line-height: 1.36;
 
