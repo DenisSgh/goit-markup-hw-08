@@ -45,7 +45,7 @@ header {
     margin-left: 88px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     margin-left: 93px;
   }
 }
@@ -128,19 +128,19 @@ header {
     // margin-left: 73px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     // margin-left: 289px;
   }
 }
 
 .site-contacts {
   margin-left: auto;
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     display: flex;
     align-items: center;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
+  @media screen and (min-width: $tablet) and (max-width: $max-desktop) {
     flex-direction: column;
     align-items: normal;
   }
@@ -159,11 +159,11 @@ header {
     margin-bottom: 16px;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
+  @media screen and (min-width: $tablet) and (max-width: $max-desktop) {
     margin-bottom: 10px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     margin-right: 50px;
   }
 }
@@ -208,14 +208,14 @@ header {
     line-height: 1.16;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     font-size: 14px;
     line-height: 1.14;
   }
 }
 
 .link.link-contacts {
-  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
+  @media screen and (min-width: $tablet) and (max-width: $max-desktop) {
     padding: 0;
   }
 }

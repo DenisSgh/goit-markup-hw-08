@@ -1,7 +1,7 @@
 .portfolio {
   @include paddingContainer(60px);
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     @include paddingContainer(94px);
   }
 }
@@ -17,7 +17,7 @@
     margin-bottom: 15px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     justify-content: center;
     margin-bottom: 35px;
   }
@@ -70,7 +70,7 @@
   width: 100%;
   height: 100%;
 
-  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
+  @media screen and (min-width: $tablet) and (max-width: $max-desktop) {
     width: 354px;
 
     &:not(:nth-child(2n)) {
@@ -78,13 +78,13 @@
     }
   }
 
-  @media screen and (max-width: $max-desctop) {
+  @media screen and (max-width: $max-desktop) {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     width: 370px;
 
     &:not(:nth-child(3n)) {

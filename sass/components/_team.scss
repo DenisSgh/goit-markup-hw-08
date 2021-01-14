@@ -4,7 +4,7 @@
 
   @include paddingContainer(60px);
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     @include paddingContainer(94px);
   }
 }
@@ -15,7 +15,7 @@
   line-height: 1.17;
   margin-bottom: 50px;
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     font-size: 36px;
   }
 }
@@ -38,7 +38,7 @@
       margin-bottom: 30px;
     }
   }
-  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
+  @media screen and (min-width: $tablet) and (max-width: $max-desktop) {
     &:nth-child(-n + 2) {
       margin-bottom: 30px;
     }
@@ -48,7 +48,7 @@
     }
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     &:not(:last-child) {
       margin-right: 30px;
     }
@@ -62,7 +62,7 @@
     width: 354px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     width: 270px;
   }
 }
@@ -71,7 +71,7 @@
   padding: 30px 0px 24px;
   margin: 0 10px;
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     padding: 30px 0px;
   }
 }

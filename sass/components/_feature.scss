@@ -1,7 +1,7 @@
 .feature {
   @include paddingContainer(60px);
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     @include paddingContainer(94px);
   }
 }
@@ -19,7 +19,7 @@
     width: 354px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     width: 270px;
   }
 }
@@ -57,7 +57,7 @@
     }
   }
 
-  @media screen and (min-width: $tablet) and (max-width: $max-desctop) {
+  @media screen and (min-width: $tablet) and (max-width: $max-desktop) {
     max-width: 354px;
 
     &:not(:nth-child(2n)) {
@@ -65,7 +65,7 @@
     }
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     max-width: 270px;
 
     &:not(:last-child) {

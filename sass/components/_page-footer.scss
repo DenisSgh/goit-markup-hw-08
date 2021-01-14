@@ -13,7 +13,7 @@ footer .container {
     flex-wrap: wrap;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     flex-direction: row;
     align-items: start;
   }
@@ -21,7 +21,7 @@ footer .container {
 
 // ! Address
 .address-container {
-  @media screen and (max-width: $max-desctop) {
+  @media screen and (max-width: $max-desktop) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@ footer .container {
     width: 50%;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     width: 231px;
     margin-right: 70px;
   }
@@ -47,7 +47,7 @@ address {
   font-size: 14px;
   line-height: 1.71;
 
-  @media screen and (max-width: $max-desctop) {
+  @media screen and (max-width: $max-desktop) {
     text-align: center;
   }
 }
@@ -59,14 +59,14 @@ address {
 .contacts .address-item:not(:last-child) {
   margin-bottom: 8px;
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     margin-bottom: 9px;
   }
 }
 
 // ! Social links
 .social-links-container {
-  @media screen and (max-width: $max-desctop) {
+  @media screen and (max-width: $max-desktop) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,7 +78,7 @@ address {
     width: 50%;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     width: 206px;
     margin-right: 93px;
   }
@@ -130,7 +130,7 @@ address {
 .subscribe-container {
   width: 100%;
 
-  @media screen and (max-width: $max-desctop) {
+  @media screen and (max-width: $max-desktop) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,7 +140,7 @@ address {
     width: 100%;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     width: 570px;
   }
 }
@@ -153,7 +153,7 @@ address {
   line-height: 1.14;
   text-transform: uppercase;
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     margin-top: 12px;
   }
 }
@@ -162,7 +162,7 @@ address {
   @extend %flex-column;
   width: 100%;
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     flex-direction: row;
   }
 }
@@ -179,7 +179,7 @@ address {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 
-  @media screen and (max-width: $max-desctop) {
+  @media screen and (max-width: $max-desktop) {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -188,7 +188,7 @@ address {
     width: 450px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     width: 358px;
     margin-right: 12px;
   }
