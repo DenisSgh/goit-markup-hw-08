@@ -126,6 +126,10 @@
   border: 1px solid #eee;
   border-top: 0;
   padding: 20px 24px;
+
+  @media screen and (min-width: $tablet) and (max-width: $max-desktop) {
+    padding: 20px 12px 20px 24px;
+  }
 }
 
 .content-image {

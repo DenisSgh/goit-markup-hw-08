@@ -622,6 +622,12 @@ header {
   padding: 20px 24px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .content .card-description {
+    padding: 20px 12px 20px 24px;
+  }
+}
+
 .content-image {
   width: 100%;
 }
